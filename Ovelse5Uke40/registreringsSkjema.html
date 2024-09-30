@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registreringsskjema</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Registreringsskjema</h1>
+    </header>
+    <nav>
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="valideringsoppgave.html">Valideringsoppgaven</a></li>
+            <li><a href="mal.html">Nettside-Mal</a></li>
+            <li><a href="kontakt.html">Kontakt oss</a></li>
+            <li><a href="registreringsSkjema.html">Registreringsskjema</a></li>
+            <li><a href="oppskrift.html">Oppskrifter</a></li>
+            <li><a href="timeplan.html">Timeplan</a></li>
+        </ul>
+    </nav>
+    <form action="action_page.php" target="_blank">
+        <label for="fname">First name: </label><br>
+        <input type="text" id="fname" name="fname"
+        pattern="[A-Za-zæøåÆØÅ ]{2,}" required><br>
+        <label for="lname">Last name: </label><br>
+        <input type="text" id="lname" name="lname"
+        pattern="[A-Za-zæøåÆØÅ ]{2,}" required><br>
+
+        <label for="email">Email: </label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="passord">Passord: </label><br>
+        <input type="password" id="passord" name="passord"
+        minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+
+        <label for="alder">Alder</label><br>
+        <input type="number" id="alder" name="alder" min="18" max="99"><br>
+
+        <label for="telefonnummer">Telefonnummer: </label><br>
+        <input type="tel" id="telefonnummer" name="telefonnummer"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+
+        <label for="fødselsdato">Fødselsdato</label><br>
+        <input type="date" id="fødselsdato" name="fødselsdato"
+        max="2023-12-31" required><br>
+
+        <label for="man">Man: </label>
+        <input type="radio" id="man" name="man" required><br>
+        <label for="kvinne">Kvinne: </label>
+        <input type="radio" id="kvinne" name="kvinne" required><br>
+        <label for="annet">Annet: </label>
+        <input type="radio" id="annet" name="annet" required><br>
+
+        <label for="land">Land: </label>
+        <select for="land" name="land">
+            <option value="norge">Norge</option>
+            <option value="sverige">Sverige</option>
+            <option value="danmark">Danmark</option>
+        </select><br>
+
+        <label for="personvern">Personvern: </label>
+        <input type="checkbox" id="personvern" name="personvern" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <footer>
+        <p>IsakVO E-post: IsakVO@hiof.no</p>
+    </footer>
+</body>
+
+</html>
