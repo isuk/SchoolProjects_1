@@ -1,0 +1,11 @@
+.flexbox{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+header {
+    text-align: center;
+}
